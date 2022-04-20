@@ -1,0 +1,63 @@
+
+     
+{% load static %}
+<!-- {% load crispy_forms_tags %}
+ -->
+<!--Login--> 
+<!-- <div class="container py-5">
+  <div class="jumbotron content div-center">
+    <h1 align='center'>Login</h1>
+    <form method="POST" align='center'>
+      {% csrf_token %}
+      {{ login_form|crispy }}
+      <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+    <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+  </div>
+</div> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'todo/style.css'%}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="back">
+
+
+  <div class="div-center">
+
+
+    <div class="content">
+
+
+      <h3>Login</h3>
+      <hr />
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">UserName </label>
+          <input type="text" class="form-control" name="username" id="exampleInputEmail1" placeholder="UserName">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <hr />
+        <a href="{% url 'register' %}" class="btn btn-link">Sign Up</a>
+
+      </form>
+
+    </div>
+
+
+    </span>
+  </div>
+</body>
+</html>
+

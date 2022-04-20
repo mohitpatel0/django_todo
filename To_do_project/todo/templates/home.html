@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="margin-bottom: 10px;">
+  <form method="get">
+    {{ filter.form }}
+    <button type="submit" class="btn btn-info " >Filter</button>
+    <a class="btn btn-info " href="{% url 'task-csv' %}" >Convert To Csv</a>
+  </form>
+</div>
+    {% for task, value in colordic.items %}
+      
+        <article class="media content-section">
+            
+            <div class="media-body">
+              <div class="article-metadata">
+              
+                <small class="text-muted">Task created : {{ task.task_created_date|date:"F d, Y" }}</small>
+              </div>
+              
+              <h2><a class="article-title" href="{% url 'task-detail' task.pk %}" style="color:{{value}}; ">{{ task.task_name}}</a></h2>
+              <div>
+                <a class="btn btn-outline-info"  href="{% url 'task-update' task.pk %}">Edit</a>
+                <a class="btn btn-outline-danger" href="{% url 'task-delete' task.pk %}">Delete</a>
+                <a class="btn btn-outline-success" href="{% url 'history' task.pk %}">Complete Task</a>
+              </div>
+              <div style="margin-top: 10px; ">
+                <small class="text-muted">Due date : {{ task.task_end_date|date:"F d, Y" }}</small>
+              </div>
+            </div>
+          </article>
+      
+    {% endfor %}
+   
+{% endblock content %}
+
+
+
+

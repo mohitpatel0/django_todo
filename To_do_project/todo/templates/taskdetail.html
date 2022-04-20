@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" >
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Your Task</legend>
+                {{ u_form|crispy }}
+            </fieldset>
+           
+        </form>
+       
+        <div class="d-print-none mt-4" style="margin-bottom:50px;">
+            <div class="float-end">
+                <a class="btn btn-outline-info"  href="{% url 'task-update' id %}">Edit</a>
+                <a class="btn btn-outline-danger" href="{% url 'task-delete' id %}">Delete</a>
+                <a class="btn btn-outline-success" href="{% url 'history' id %}">Complete Task</a>
+                <a class="btn btn-outline-success" href="{% url 'task-pdf' %}">Create Pdf</a>
+                <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light me-1"><i class="fa fa-print"></i>Create Pdf</a>
+               
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+

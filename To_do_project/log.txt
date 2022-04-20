@@ -1,0 +1,59 @@
+D:\mohit\training\Django-todo\venv\lib\site-packages\floppyforms\__init__.py:20: UserWarning: Unable to import floppyforms.gis, geometry widgets not available
+  warnings.warn(
+D:\mohit\training\Django-todo\venv\lib\site-packages\floppyforms\__init__.py:20: UserWarning: Unable to import floppyforms.gis, geometry widgets not available
+  warnings.warn(
+Watching for file changes with StatReloader
+[26/Aug/2021 16:50:59] "GET /login/ HTTP/1.1" 200 1985
+[26/Aug/2021 16:50:59] "GET /static/todo/style.css HTTP/1.1" 304 0
+[26/Aug/2021 16:51:08] "POST /login/ HTTP/1.1" 302 0
+[26/Aug/2021 16:51:09] "GET /home/ HTTP/1.1" 200 10241
+[26/Aug/2021 16:51:11] "GET /history/ HTTP/1.1" 200 7872
+[26/Aug/2021 16:51:12] "GET /home/ HTTP/1.1" 200 10241
+[26/Aug/2021 16:51:14] "GET /home/?task_name=second+task HTTP/1.1" 200 7818
+[26/Aug/2021 16:51:15] "GET /home/ HTTP/1.1" 200 10241
+[26/Aug/2021 16:51:16] "GET /logout/ HTTP/1.1" 200 6560
+[26/Aug/2021 16:51:18] "GET /login/ HTTP/1.1" 200 1985
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2021 - 16:50:58
+Django version 3.2.6, using settings 'To_do_project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+(<QueryDict: {}>,)
+<QuerySet [<TaskData: 2>, <TaskData: 1>, <TaskData: 11>, <TaskData: 12>]>
+2
+1
+11
+12
+['second task', 'first task', 'heloji', 'dsgdsfgdsf']
+{<TaskData: 2>: 'red', <TaskData: 1>: 'red', <TaskData: 11>: 'green', <TaskData: 12>: 'red'}
+(<QueryDict: {}>,)
+<QuerySet [<TaskData: 3>, <TaskData: 10>]>
+3
+10
+['third task', 'four']
+(<QueryDict: {}>,)
+<QuerySet [<TaskData: 2>, <TaskData: 1>, <TaskData: 11>, <TaskData: 12>]>
+2
+1
+11
+12
+['second task', 'first task', 'heloji', 'dsgdsfgdsf']
+{<TaskData: 2>: 'red', <TaskData: 1>: 'red', <TaskData: 11>: 'green', <TaskData: 12>: 'red'}
+(<QueryDict: {'task_name': ['second task']}>,)
+<QuerySet [<TaskData: 2>, <TaskData: 1>, <TaskData: 11>, <TaskData: 12>]>
+2
+1
+11
+12
+['second task', 'first task', 'heloji', 'dsgdsfgdsf']
+{<TaskData: 2>: 'red'}
+(<QueryDict: {}>,)
+<QuerySet [<TaskData: 2>, <TaskData: 1>, <TaskData: 11>, <TaskData: 12>]>
+2
+1
+11
+12
+['second task', 'first task', 'heloji', 'dsgdsfgdsf']
+{<TaskData: 2>: 'red', <TaskData: 1>: 'red', <TaskData: 11>: 'green', <TaskData: 12>: 'red'}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="margin-bottom: 10px;">
+  <form method="get">
+    {{ filter.form }}
+    <button type="submit"  class="btn btn-info ">Filter</button>
+    <a class="btn btn-info " href="{% url 'task-csv' %}" >Convert To Csv</a>
+  </form>
+</div>
+    {% for task in tasks %}
+      
+        <article class="media content-section">
+        
+            <div class="media-body">
+              <div class="article-metadata">
+              
+                <small class="text-muted">{{ task.task_created_date|date:"F d, Y" }}</small>
+              </div>
+              
+              <h2><a class="article-title" href="{% url 'task-detail' task.pk %}">{{ task.task_name}}</a></h2>
+             
+              <small class="text-muted">{{ task.task_end_date|date:"F d, Y" }}</small>
+            </div>
+          </article>
+     
+    {% endfor %}
+   
+{% endblock content %}
+
+
+
+
